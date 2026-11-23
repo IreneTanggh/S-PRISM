@@ -1,0 +1,273 @@
+/* Tutorial Overlay Styles */
+.tutorial-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+/* Tutorial Controls */
+.tutorial-controls {
+    position: fixed;
+    bottom: 20px;
+    left: 800px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    pointer-events: auto;
+    min-width: 280px;
+    transition: all 0.3s ease;
+}
+
+.tutorial-controls:hover {
+    transform: translateY(2px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.tutorial-title {
+    color: #1976d2;
+    font-weight: 600;
+    margin-bottom: 16px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.tutorial-control-buttons {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tutorial-control-btn {
+    background: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    color: #666;
+}
+
+.tutorial-control-btn:hover {
+    background: #e3f2fd;
+    border-color: #1976d2;
+    color: #1976d2;
+    transform: scale(1.05);
+}
+
+.tutorial-control-btn.start {
+    background: #4caf50;
+    border-color: #4caf50;
+    color: white;
+}
+
+.tutorial-control-btn.start:hover {
+    background: #45a049;
+    border-color: #45a049;
+    color: white;
+}
+
+.tutorial-control-btn.pause {
+    background: #ff9800;
+    border-color: #ff9800;
+    color: white;
+}
+
+.tutorial-control-btn.pause:hover {
+    background: #f57c00;
+    border-color: #f57c00;
+    color: white;
+}
+
+.tutorial-control-btn.skip {
+    background: #f44336;
+    border-color: #f44336;
+    color: white;
+}
+
+.tutorial-control-btn.skip:hover {
+    background: #d32f2f;
+    border-color: #d32f2f;
+    color: white;
+}
+
+.tutorial-control-btn.close {
+    background: #9e9e9e;
+    border-color: #9e9e9e;
+    color: white;
+}
+
+.tutorial-control-btn.close:hover {
+    background: #757575;
+    border-color: #757575;
+    color: white;
+}
+
+
+
+/* Joyride Custom Styles */
+.react-joyride__overlay {
+    background: rgba(0, 0, 0, 0.6) !important;
+}
+
+.react-joyride__tooltip {
+    background: #ffffff !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    max-width: 600px !important;
+    min-width: 500px !important;
+    padding: 20px !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+.react-joyride__tooltip h3 {
+    color: #1976d2 !important;
+    font-weight: 600 !important;
+    margin-bottom: 12px !important;
+    font-size: 1.2rem !important;
+}
+
+.react-joyride__tooltip p {
+    color: #333 !important;
+    line-height: 1.6 !important;
+    margin-bottom: 12px !important;
+    font-size: 1rem !important;
+    padding: 0 8px !important;
+}
+
+.react-joyride__tooltip ul {
+    margin: 8px 0 !important;
+    padding-left: 20px !important;
+}
+
+.react-joyride__tooltip li {
+    color: #555 !important;
+    margin-bottom: 4px !important;
+    line-height: 1.5 !important;
+}
+
+.react-joyride__tooltip strong {
+    color: #1976d2 !important;
+    font-weight: 600 !important;
+}
+
+.react-joyride__tooltip button {
+    border-radius: 6px !important;
+    font-weight: 500 !important;
+    text-transform: none !important;
+    font-size: 0.9rem !important;
+    padding: 8px 16px !important;
+    transition: all 0.2s ease !important;
+}
+
+.react-joyride__tooltip button:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Spotlight Styles */
+.react-joyride__spotlight {
+    border-radius: 8px !important;
+    box-shadow: 0 0 0 4px rgba(25, 118, 210, 0.3) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tutorial-controls {
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        min-width: auto;
+        padding: 12px;
+    }
+    
+    .react-joyride__tooltip {
+        max-width: 1200px ;
+        /* min-width: auto !important; */
+        margin: 0 10px !important;
+        padding: 16px !important;
+    }
+}
+
+/* Animation Classes */
+.tutorial-fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+.tutorial-slide-up {
+    animation: slideUp 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tutorial Highlight Effects */
+.tutorial-highlight {
+    position: relative;
+    z-index: 10001;
+}
+
+.tutorial-highlight::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    background: linear-gradient(45deg, #1976d2, #42a5f5, #1976d2);
+    border-radius: 8px;
+    z-index: -1;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+/* Tutorial Completion Celebration */
+.tutorial-completion {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, #4caf50, #45a049);
+    color: white;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 10002;
+    animation: celebration 0.5s ease-out;
+}
+
+@keyframes celebration {
+    0% { 
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    100% { 
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+} 
